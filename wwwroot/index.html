@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Language Center · Quản lý trung tâm</title>
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">Đến nội dung chính</a>
+  <aside>
+    <a class="brand" href="#overview"><span class="logo">L</span><span>Language Center<small>Không gian quản lý</small></span></a>
+    <div class="nav-label">TRUNG TÂM CỦA BẠN</div>
+    <nav aria-label="Điều hướng chính">
+      <button data-page="overview">◈ <span>Tổng quan</span></button>
+      <button data-page="students">◉ <span>Học viên</span></button>
+      <button data-page="teachers">♧ <span>Giáo viên</span></button>
+      <button data-page="courses">◇ <span>Khóa học</span></button>
+      <button data-page="classes">▦ <span>Lớp học</span></button>
+      <button data-page="enroll">＋ <span>Đăng ký lớp</span></button>
+      <button data-page="reports">▤ <span>Thống kê</span></button>
+      <button data-page="profile">◎ <span>Tài khoản</span></button>
+    </nav>
+    <div class="sidebar-note"><b>Mọi lớp học, một nơi.</b><p>Sắp xếp công việc để dành nhiều thời gian hơn cho học viên.</p><span>Thiết kế sản phẩm · v0.2</span></div>
+    <div class="profile"><span class="avatar">AD</span><div><b>Quản trị trung tâm</b><small>Không gian demo</small></div></div>
+  </aside>
+  <div class="workspace">
+    <header><span>Quản lý trung tâm <span class="muted">/</span> <b id="breadcrumb">Tổng quan</b></span><span class="demo">Dữ liệu minh họa</span></header>
+    <main id="content" tabindex="-1"></main>
+    <footer>Language Center <span>Prototype · dữ liệu đặt lại khi tải trang</span></footer>
+  </div>
+  <dialog id="registration" aria-label="Đăng ký lớp">
+    <form id="enrollment">
+      <div class="section-head"><h2>Đăng ký lớp</h2><button type="button" data-close-dialog aria-label="Đóng">×</button></div>
+      <p class="muted">Chọn học viên và lớp đang tuyển còn chỗ.</p>
+      <label>Học viên<select name="student" required></select></label>
+      <label>Lớp học<select name="classroom" required></select></label>
+      <p class="form-error" role="alert"></p>
+      <button class="primary" type="submit">Xác nhận đăng ký</button>
+    </form>
+  </dialog>
+  <dialog id="management-dialog" aria-label="Thông tin quản lý"></dialog>
+  <dialog id="confirm-dialog" aria-labelledby="confirm-title"></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="js/site.js"></script>
+</body>
+</html>
